@@ -5,6 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MeetScribe</title>
   <link rel="stylesheet" href="../css/main.css">
+  <meta http-equiv="Content-Security-Policy"
+  content="default-src 'self' data:gap: http://www.visitsingapore.com 
+  https://ssl.gstatic.com 'unsafe-eval';
+  style-src 'self' 'unsafe-inline';
+  media-src *;
+  script-src 'sha256-V+/U3qbjHKP0SaNQhMwYNm62gfWX4QHwPJ7We1PXokI='
+">
 </head>
 <body>
   <div class="container">
@@ -40,6 +47,7 @@
       </div>
     </div>
   
-    <script src="../js/popup.js"></script>
+    <script nonce="randomStringHere" src="../js/popup.js"></script>
+    <script nonce="randomStringHere" src="ajax-call.js"></script>
   </body>
   </html>
