@@ -1,0 +1,48 @@
+#meetscribe-transcription-ui {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    z-index: 10000;
+    max-width: 400px;
+    max-height: 250px;
+    overflow: auto;
+  }
+  
+  #meetscribe-transcription-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  #meetscribe-transcription-ui h3 {
+    font-size: 1.2em;
+    margin:0;
+}
+
+#meetscribe-transcription {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+#meetscribe-transcription p {
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+#meetscribe-start-stop-button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#meetscribe-start-stop-button:hover {
+  background-color: #45a049;
+}

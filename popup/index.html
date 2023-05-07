@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeetScribe</title>
+  <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+  <div class="container">
+    <div class="logo">
+      <img src="../assets/images/logo.png" alt="MeetScribe Logo">
+    </div>
+    <h1>MeetScribe</h1>
+    <p>Real-time transcription, summary, and speaker identification for your meetings.</p>
+
+    <div class="controls">
+      <button id="startTranscription" class="btn btn-primary">Start Transcription</button>
+      <button id="stopTranscription" class="btn btn-secondary" disabled>Stop Transcription</button>
+    </div>
+
+    <div class="summary-section">
+      <h2>Summary</h2>
+      <p id="summary"></p>
+    </div>
+
+    <div class="action-items-section">
+        <h2>Action Items</h2>
+        <ul id="actionItems"></ul>
+      </div>
+  
+      <div class="next-meeting-agenda-section">
+        <h2>Next Meeting Agenda</h2>
+        <ul id="nextMeetingAgenda"></ul>
+      </div>
+  
+      <div class="options">
+        <button id="viewFullTranscript" class="btn btn-link">View Full Transcript</button>
+        <button id="shareContent" class="btn btn-link">Share</button>
+      </div>
+    </div>
+  
+    <script src="../js/popup.js"></script>
+  </body>
+  </html>
