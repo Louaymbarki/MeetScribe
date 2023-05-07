@@ -1,3 +1,6 @@
 Error 1 : 
-Invalid value for 'content_security_policy'.
-Could not load manifest.
+Unchecked runtime.lastError: Could not establish connection. Receiving end does not exist.
+Context
+Unknown
+Stack Trace
+:0 (anonymous function)
