@@ -20,32 +20,36 @@
     "activeTab",
     "storage",
     "notifications",
-    "identity",
+    "identity"
+  ],
+  "host_permissions": [
     "https://www.googleapis.com/*"
   ],
   "content_scripts": [
     {
       "matches": [
-          "*://*.google.com/*",
-          "*://*.zoom.us/*",
-          "*://*.microsoft.com/*",
-          "*://*.webex.com/*"
-        ],
-        "js": [
-          "js/content.js"
-        ],
-        "css": [
-          "css/main.css"
-        ]
-      }
-    ],
-    "background": {
-      "service_worker": "js/background.js"
-    },
-    "options_page": "options.html",
-    "content_security_policy": "script-src 'self' https://www.googleapis.com; object-src 'self' 'unsafe-eval'; manifest-src 'self'",
-    "web_accessible_resources": [
-      "lib/whisper-asr.js",
-      "lib/openai-gpt.js"
-    ]
+        "*://*.google.com/*",
+        "*://*.zoom.us/*",
+        "*://*.microsoft.com/*",
+        "*://*.webex.com/*"
+      ],
+      "js": [
+        "js/content.js"
+      ],
+      "css": [
+        "css/main.css"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "options_page": "options.html",
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "web_accessible_resources": [{ 
+    "resources": ["/images/icon.png", "lib/whisper-asr.js", "lib/openai-gpt.js"],
+    "matches": ["<all_urls>"]
+  }]
 }

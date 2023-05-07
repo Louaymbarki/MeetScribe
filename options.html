@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extension Options</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+    select, input[type="checkbox"] {
+      margin-top: 5px;
+    }
+    button {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Extension Options</h1>
+  <form id="options-form">
+    <label for="language">Transcription Language:</label>
+    <select id="language">
+      <option value="en-US">English (US)</option>
+      <option value="en-GB">English (UK)</option>
+      <option value="es-ES">Spanish (Spain)</option>
+      <option value="fr-FR">French (France)</option>
+      <!-- Add more languages as needed -->
+    </select>
+
+    <label for="enable-speaker-identification">Enable Speaker Identification:</label>
+    <input type="checkbox" id="enable-speaker-identification">
+
+    <button type="submit">Save Options</button>
+  </form>
+
+  <script src="options.js"></script>
+</body>
+</html>
