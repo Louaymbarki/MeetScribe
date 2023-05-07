@@ -1,31 +1,31 @@
 {
-    "manifest_version": 3,
-    "name": "MeetScribe",
-    "version": "1.0.0",
-    "description": "Real-time transcription, summary, and speaker identification for Google Meet, Zoom, MS Teams, and Webex meetings using Whisper ASP and GPT-3.5 Turbo.",
-    "icons": {
+  "manifest_version": 3,
+  "name": "MeetScribe",
+  "version": "1.0.0",
+  "description": "Real-time transcription, summary, and speaker identification for Google Meet, Zoom, MS Teams, and Webex meetings using Whisper ASP and GPT-3.5 Turbo.",
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/index.html",
+    "default_icon": {
       "16": "assets/icons/icon16.png",
       "48": "assets/icons/icon48.png",
       "128": "assets/icons/icon128.png"
-    },
-    "action": {
-      "default_popup": "popup/index.html",
-      "default_icon": {
-        "16": "assets/icons/icon16.png",
-        "48": "assets/icons/icon48.png",
-        "128": "assets/icons/icon128.png"
-      }
-    },
-    "permissions": [
-      "activeTab",
-      "storage",
-      "notifications",
-      "identity",
-      "https://www.googleapis.com/*"
-    ],
-    "content_scripts": [
-      {
-        "matches": [
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "notifications",
+    "identity",
+    "https://www.googleapis.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
           "*://*.google.com/*",
           "*://*.zoom.us/*",
           "*://*.microsoft.com/*",
@@ -43,12 +43,9 @@
       "service_worker": "js/background.js"
     },
     "options_page": "options.html",
-    "content_security_policy": {
-      "extension_pages": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-      "sandbox": "allow-scripts"
-    },
+    "content_security_policy": "script-src 'self' https://www.googleapis.com; object-src 'self' 'unsafe-eval'; manifest-src 'self'",
     "web_accessible_resources": [
       "lib/whisper-asr.js",
       "lib/openai-gpt.js"
     ]
-  }
+}
